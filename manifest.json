@@ -1,0 +1,21 @@
+{
+  "manifest_version": 2,
+  "name": "FuckCSDN",
+  "version": "1.0",
+  "icons": {
+    "48": "icons/whirlwind.jpg"
+  },
+  "description": "Clean CSDN's limitation scripts",
+  "content_scripts": [{
+    "matches": ["*://*.csdn.net/*"],
+    "js": ["fuckcsdn.js"]
+  }],
+  "permissions": [
+    "webRequest",
+    "webRequestBlocking",
+    "*://*/*"
+  ],
+  "background": {
+    "scripts": ["background.js"]
+  }
+}
